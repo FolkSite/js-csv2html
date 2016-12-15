@@ -19,7 +19,7 @@ class csv2html {
 			bodyClass: "csv2html-body",
 			splitter: ","
 		};
-		_default.css: `.${_default.tableClass}{border:1px solid #000000;background-color:#ffffff;}.${_default.headClass}{background-color:#ff0000;}.${_default.bodyClass}{background-color:#ffff00;}`;
+		_default.css = `.${_default.tableClass}{border:1px solid #000000;background-color:#ffffff;}.${_default.headClass}{background-color:#ff0000;}.${_default.bodyClass}{background-color:#ffff00;}`;
 		this.options = Object.assign({}, _default, options);
 	}
 
