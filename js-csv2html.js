@@ -117,3 +117,28 @@ class csv2html {
 	}
 
 }
+
+/**
+Example:
+
+var csv = ['"title","description","category"',
+'"Home network","Home network Wi-Fi","Wi-Fi networks"',
+'"Job network","Job network Wi-Fi","Wi-Fi networks"'].join('\n');
+
+var CSVConverter = new csv2html({splitter: ","});
+var table = CSVConverter.convert(csv);
+
+// Get DOM element
+document.body.appendChild(table.table());
+
+// Get HTML string
+console.log(table.html());
+
+var css = CSVConverter.options.css;
+
+var head = document.head || document.getElementsByTagName('head')[0];
+var style = document.createElement('style');
+style.type = 'text/css';
+style.appendChild(document.createTextNode(css));
+head.appendChild(style);
+ */
