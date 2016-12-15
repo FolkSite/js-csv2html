@@ -70,5 +70,6 @@
 		};
 		return csv2html;
 	}());
+	return csv2html;
 }));
 
