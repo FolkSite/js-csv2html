@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>js-csv2html test</title>
+		<script src="https://rawgit.com/yarkovaleksei/js-csv2html/master/js-csv2html.js"></script>
+		<style>
+			.container {
+				width: 50%;
+				margin: 0 auto;
+			}
+			.container *{
+				width: 100%;
+				margin: 0 auto;
+			}
+		</style>
+		<script>
+			var CSVConverter = new csv2html({splitter: ","});
+			var css = CSVConverter.options.css;
+			var head = document.head || document.getElementsByTagName('head')[0];
+			var style = document.createElement('style');
+			style.type = 'text/css';
+			style.appendChild(document.createTextNode(css));
+			head.appendChild(style);
+			function convert() {
+				var csv = document.getElementById('csv').value;
+				var output = document.getElementById('output');
+				var output_html = document.getElementById('html');
+				var table = CSVConverter.convert(csv);
+				output.innerHTML = "";
+				output.appendChild(table.table());
+				output_html.value = table.html();
+			}
+			document.addEventListener('DOMContentLoaded', function(){
+				document.getElementById('button').addEventListener('click', convert);
+			}, false);
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div>
+				<textarea id="csv" cols="55" rows="5">"title","description","category"
+"Home network","Home network Wi-Fi","Wi-Fi networks"
+"Job network","Job network Wi-Fi","Wi-Fi networks"</textarea>
+			</div>
+			<div><button id="button">Convert</button></div>
+			<div>
+				<textarea id="html" cols="55" rows="5"></textarea>
+			</div>
+			<div>
+				<div id="output"></div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -17,10 +17,11 @@ class csv2html {
 			tableClass: "csv2html-table",
 			headClass: "csv2html-head",
 			bodyClass: "csv2html-body",
-			splitter: ","
+			splitter: ",",
+			css: ".csv2html-table{width:100%;border:1px solid #000000;background-color:#ffffff;}.csv2html-head{background-color:#ff0000;}.csv2html-body{background-color:#ffff00;}"
 		};
-		_default.css = `.${_default.tableClass}{border:1px solid #000000;background-color:#ffffff;}.${_default.headClass}{background-color:#ff0000;}.${_default.bodyClass}{background-color:#ffff00;}`;
 		this.options = Object.assign({}, _default, options);
+		this.options.css = `.${this.options.tableClass}{border:1px solid #000000;background-color:#ffffff;}.${this.options.headClass}{background-color:#ff0000;}.${this.options.bodyClass}{background-color:#ffff00;}`;
 	}
 
 	/**
