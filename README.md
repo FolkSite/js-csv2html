@@ -1,3 +1,3 @@
 # js-csv2html
 
-**[Demo](https://jsfiddle.net/yarkov_aleksei/xxepr7xL/)**
+**[Demo](https://yarkovaleksei.github.io/js-csv2html/)**
