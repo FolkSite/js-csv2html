@@ -28,7 +28,7 @@
 			css: ".csv2html-table{width:100%;border:1px solid #000000;background-color:#ffffff;}.csv2html-head{background-color:#ff0000;}.csv2html-body{background-color:#ffff00;}"
 		};
 		self.options = Object.assign({}, _default, options);
-		self.options.css = `.${self.options.tableClass}{border:1px solid #000000;background-color:#ffffff;}.${self.options.headClass}{background-color:#ff0000;}.${self.options.bodyClass}{background-color:#ffff00;}`;
+		self.options.css = "." + self.options.tableClass + "{border:1px solid #000000;background-color:#ffffff;}." + self.options.headClass + "{background-color:#ff0000;}." + self.options.bodyClass + "{background-color:#ffff00;}";
 
 		self.createElement = function(tag, c, html) {
 			var elem = document.createElement(tag);
