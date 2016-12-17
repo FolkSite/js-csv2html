@@ -119,6 +119,7 @@ class csv2html {
 
 }
 
+export default csv2html;
 /**
 Example:
 
